@@ -20,6 +20,8 @@ app.use(express.json()); // parsing json data of req.body
 app.use(express.urlencoded({ extended: true })); // to parse form data in the req.body
 app.use(cookieParser()); // to parse cookies in the req.cookies
 
+app.use(express.static('public'));
+
 app.use("/api/users", userRoutes);
 
 app.listen(4000, () => {
